@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+/* Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #f2f2f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Rulz */
+.basketBtn,
+.mainTitle {
+  font-weight: bold;
+}
+.productPrice,
+.description p,
+select {
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Mobil max 599px */
+.home {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.upperShoe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+}
+.lowerShoe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+}
+.main {
+  position: relative;
+}
+.overlay {
+  background: rgba(224, 224, 224, 0.8);
+}
+.mainTitle,
+.description,
+.infos {
+  padding: 2.3rem;
+  width: 17rem;
+}
+.mainTitle {
+  font-size: 3.5rem;
+  font-style: italic;
+}
+.description {
+  font-size: 1.1rem;
+}
+.description p {
+  margin-bottom: 2rem;
+}
+.infos {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.infos img {
+  margin-right: 1.5rem;
+}
+.reviewsIcon {
+  display: flex;
+  align-items: center;
+}
+.reviewsIcon span {
+  margin-right: 0.3rem;
+}
+.basket {
+  padding: 1rem 0 0 1.5rem;
+}
+.basket select {
+  font-size: 1rem;
+  border: none;
+  width: 15rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+.addToBakset {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}
+.basketBtn {
+  padding: 1rem;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 7px -3px gray;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.productPrice {
+  font-size: 1.8rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Tablet */
+@media (min-width: 800px) {
+  .upperShoe {
+    width: 400px;
   }
-  to {
-    transform: rotate(360deg);
+  .lowerShoe {
+    width: 400px;
+  }
+  .mainTitle,
+  .description,
+  .infos {
+    padding: 3rem;
+    width: 25rem;
+  }
+  .mainTitle {
+    padding-left: 3rem;
+    font-size: 4.5rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+  .infos {
+    font-size: 1.5rem;
+  }
+  .basket {
+    padding: 1rem 0 0 3rem;
+  }
+  .basket select {
+    font-size: 1.5rem;
+  }
+  .productPrice {
+    font-size: 2rem;
+  }
+  .overlay {
+    background: rgba(224, 224, 224, 0.8);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  .main {
+    height: calc(100vh - 78px);
+  }
+  .upperShoe {
+    position: absolute;
+    top: -14%;
+    right: 19%;
+    width: 35%;
+  }
+  .lowerShoe {
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    width: 35%;
+  }
+  .gridContainer {
+    display: grid;
+    padding: 3rem 0 0rem 8rem;
+  }
+  .mainTitle,
+  .description,
+  .infos {
+    padding: 1rem;
+  }
+  .mainTitle {
+    font-size: 56px;
+    width: 24rem;
+    grid-row: 1;
+  }
+  .description {
+    font-size: 18px;
+    width: 21rem;
+    grid-row: 2;
+  }
+  .infos {
+    font-size: 1rem;
+    grid-row: 3;
+  }
+  .basket {
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 1rem;
+  }
+  .basket select {
+    font-size: 16px;
+  }
+  .productPrice {
+    font-size: 30px;
+  }
+  .overlay {
+    background: none;
   }
 }
